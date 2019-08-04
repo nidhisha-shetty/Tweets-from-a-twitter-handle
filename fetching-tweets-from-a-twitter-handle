@@ -6,7 +6,7 @@ api_key = 'aBBztpIv3jotagnMJLSovJrGf' #enter api key
 api_secret_key = 'TzNxIUfFnRvesoWFpJr06C17eSfGoWQiBPjjKIUfzlsK96F23f' #enter api secret key
 
 auth = OAuth1(api_key, api_secret_key) #authenticating the keys
-screen_name = 'moneycontrolcom' # search keyword 
+screen_name = 'moneycontrolcom' # search keyword (twitter handle)
 url="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+screen_name+"&count=200"
 ans = requests.get(url, auth=auth)
 jtweet = json.loads(ans.text)
